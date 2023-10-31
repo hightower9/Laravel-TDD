@@ -31,4 +31,13 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'google' => [
+        'client_id' => env('GOOGLE_CLIENT_ID'),
+        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+        'redirect_uri' => env('GOOGLE_REDIRECT_URI'),
+        'scopes' => [
+            env('GOOGLE_SCOPE_AUTH', 'https://www.googleapis.com/auth/drive'),
+            env('GOOGLE_SCOPE_DRIVE_FILE', 'https://www.googleapis.com/auth/drive.file'),
+        ],
+    ],
 ];
